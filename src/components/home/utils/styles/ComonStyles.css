@@ -1,0 +1,199 @@
+.bannerPromotionBox {
+    width: 100%;
+    background-image: url("https://www.shangrila-plaza.com/app/uploads/2020/11/Fashion.png");
+    height: 400px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.promotionText {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    gap: 20px;
+}
+.promotionText p{
+    color: var(--black-text);
+    font-weight: bold;
+}
+.promotionText h3 {
+    font-size: 35px;
+    color: var(--white-text);
+}
+
+.promotionText a {
+    text-decoration: none;
+}
+
+.btn-home {
+    position: relative;
+    background-color: var(--black-text);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: all 0.35s ease-in-out;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: white;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-home:hover {
+    color: var(--black-text);
+    background-color: white;
+}
+
+.btn-home span {
+    position: absolute;
+    background-color: var(--black-text);
+    transition: all 0.35s ease-in-out;
+}
+
+.btn-home span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: -100%;
+}
+
+.btn-home span:nth-child(2) {
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    right: -100%;
+}
+
+.btn-home span:nth-child(3) {
+    width: 2px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+.btn-home span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+.btn-home:hover span:nth-child(1) {
+    left: 0;
+}
+
+.btn-home:hover span:nth-child(2) {
+    right: 0;
+}
+
+.btn-home:hover span:nth-child(3) {
+    bottom: 0;
+}
+
+.btn-home:hover span:nth-child(4) {
+    top: 0;
+}
+
+.sliderTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10PX;
+}
+
+.sliderTitle a {
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--black-text);
+    text-decoration: none;
+    color: var(--black-text);
+}
+
+.sliderCardsBox {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sliderCard {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: calc(25% - 20px);
+}
+.sliderCardName{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.sliderCardListPrice {
+    text-decoration: line-through;
+    color: var(--gray-text);
+}
+
+.sliderCardDiscountPrice {
+    font-weight: 700;
+
+}
+.genderBannerBox{
+    display: flex;
+    gap: 40px;
+}
+.genderCard{
+    position: relative;
+    width: calc(50% - 40px);
+    cursor: pointer;
+}
+.textGender{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 300ms ease-in-out;
+}
+.genderCard img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.genderCard:hover > .textGender{
+    opacity: 1;
+}
+
+@media (max-width: 1024px){
+    .bannerPromotionBox {
+        width: 100%;
+        background-image: url("https://tennis.vtexassets.com/assets/vtex.file-manager-graphql/images/f4f15bea-be9e-40de-b277-2a286b467b64___a5affc6d33c8b67af427650955ec4ba6.jpeg");
+        background-size: cover;
+    }
+    .promotionText{
+        width: 100%;
+    }
+    .promotionText p{
+        color: var(--white-text);
+    }
+    .sliderCardsBox{
+        flex-wrap: wrap;
+    }
+    .sliderCard{
+    width: calc(50% - 20px);
+    }
+    .genderBannerBox{
+        flex-direction: column;
+    
+    }
+    .genderCard{
+        width: 100%;
+    }
+    .textGender{
+        opacity: 1;
+    }
+}

@@ -1,0 +1,101 @@
+.headerMainBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    position: fixed;
+    background: var(--white-text);
+    z-index: 2;
+    padding-bottom: 10px;
+}
+
+.topbarMain {
+    background: #f1f1f1;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15%;
+}
+
+.topbarText {
+    color: var(--black-text);
+    font-size: 1rem;
+}
+
+.topbarRoutes a:last-child {
+    border-left: 1px solid #000;
+}
+
+.topbarRoutes a {
+    color: var(--black-text);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 25px;
+}
+.headerMain{
+    display: flex;
+    flex-direction: column;
+}
+.headerSearch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+}
+.locationStores span::before{
+    content: "";
+    background-image: url("/prueba-tecnica-tennis/public/localizacion.png");
+    width: 24px;
+    height: 24px;
+}
+.searchIcons{
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchIcons input{
+    border: none;
+}
+.searchIcons input:focus-visible{
+    outline: none;
+}
+.searchIcons input::before{
+    content: "";
+    background-image: url("/prueba-tecnica-tennis/public/lupa.png");
+    width: 24px;
+    height: 24px;
+}
+.headerMenu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 2rem; */
+}
+.headerMenu a{
+    color: var(--black-text);
+    text-decoration: none;
+    text-align: center;
+    padding: 0 20px;
+}
+.headerMenu a:hover{
+font-weight: bold;
+}
+
+@media (max-width: 1024px){
+    .topbarMain{
+        align-items: center;
+        justify-content: inherit;
+    }
+
+    .topbarRoutes,
+    .headerMenu,
+    .searchIcons,
+    .locationStores{
+        display: none;
+    }
+}
